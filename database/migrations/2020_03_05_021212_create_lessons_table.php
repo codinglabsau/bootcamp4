@@ -19,6 +19,8 @@ class CreateLessonsTable extends Migration
             $table->string('lesson_name');
             $table->string('content_url');
             $table->timestamps();
+
+            $table->foreign('section_id')->references('id')->on('sections');
         });
     }
 

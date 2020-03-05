@@ -19,6 +19,8 @@ class CreateAssessmentItemsTable extends Migration
             $table->string('assessment_name');
             $table->double('mark');
             $table->timestamps();
+
+            $table->foreign('assessment_id')->references('id')->on('assessments');
         });
     }
 
