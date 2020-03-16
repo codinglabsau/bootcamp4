@@ -16,13 +16,13 @@ class CreateCourseStudentTable extends Migration
         Schema::create('course_student', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('course_id');
-            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('user_id');
             $table->double('current_mark');
             $table->integer('current_lesson');
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses');
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
