@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('courses', 'CourseController@index');
+Route::get('course/{id}', 'CourseController@show');
+Route::post('course', 'CourseController@store');
+Route::put('course', 'CourseController@store');
+Route::delete('course/{id}', 'CourseController@destroy');
+
+Route::get('comments', 'CommentController@index');
+
