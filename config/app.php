@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', '<img class="h-10" src="https://d2wks4gidu9630.cloudfront.net/f2567f63-532f-4458-9723-65e1b6fd12c3/svg/codinglabs-logo.svg" alt="logo"/>'),
 
     /*
     |--------------------------------------------------------------------------
@@ -207,7 +207,6 @@ return [
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
-        'Http' => Illuminate\Support\Facades\Http::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,

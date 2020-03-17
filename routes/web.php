@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +14,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/courses', 'CourseController@index');
+Route::get('/courses/{course}', 'CourseController@show');
+Route::get('/courses/buy/{course}', 'CourseController@buy')->middleware('auth');
+Route::get('/courses/{course}/{sectionid}', 'CourseController@section');
+
+Route::get('/student_courses', 'CourseController@studentCourses');
