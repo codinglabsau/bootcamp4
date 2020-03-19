@@ -33,6 +33,14 @@ class CreateEnrolmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_student');
+        
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        
+        Schema::dropIfExists('users');
+
+        Schema::dropIfExists('courses');
+
+        Schema::dropIfExists('enrolments');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

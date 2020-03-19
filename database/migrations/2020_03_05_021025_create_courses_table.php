@@ -17,7 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->decimal('price', 7, 2);
+            $table->float('price');
             $table->timestamps();
         });
     }
@@ -29,6 +29,8 @@ class CreateCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Schema::drop('courses');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
