@@ -4,8 +4,9 @@
 
 use App\Model;
 use Faker\Generator as Faker;
+use App\AssessmentItem;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(AssessmentItem::class, function (Faker $faker) {
     return [
         'assessment_id' => 1,
         'name' => $faker->word(3, true),

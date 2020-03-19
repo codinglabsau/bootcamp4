@@ -4,8 +4,8 @@
 
 use App\Model;
 use Faker\Generator as Faker;
-
-$factory->define(Model::class, function (Faker $faker) {
+use App\Lesson;
+$factory->define(Lesson::class, function (Faker $faker) {
     return [
         'section_id' => 1,
         'name' => $faker->words(3, true),
