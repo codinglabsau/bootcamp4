@@ -8,11 +8,13 @@ use App\AssessmentItem;
 
 class Assessment extends Model
 {
-    public function section() {
-        return $this->belongsTo('Section');
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
     }
 
-    public function assessmentItems() {
-        return $this->hasMany('AssessmentItem');
+    public function assessmentItems()
+    {
+        return $this->hasMany(AssessmentItem::class);
     }
 }
