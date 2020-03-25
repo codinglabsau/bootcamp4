@@ -5,9 +5,12 @@
 use App\Model;
 use Faker\Generator as Faker;
 use App\Asssessment;
+use App\Section;
 
 $factory->define(Assessment::class, function (Faker $faker) {
     return [
-        'section_id' => 1,
+        'section_id' => function () {
+            return factory(Section::class)->create()->id;
+        },
     ];
 });
