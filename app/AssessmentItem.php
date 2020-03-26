@@ -7,7 +7,8 @@ use App\Assessment;
 
 class AssessmentItem extends Model
 {
-    public function assessment() {
-        return $this->belongsTo('Assessment');
+    public function assessment()
+    {
+        return $this->belongsTo(Assessment::class);
     }
 }

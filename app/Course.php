@@ -8,11 +8,13 @@ use App\Section;
 
 class Course extends Model
 {
-    public function users() {
-        return $this->belongsToMany('User');
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
     }
 
-    public function sections() {
-        return $this->hasMany('Section');
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
     }
 }
