@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
