@@ -15,7 +15,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
+<body class="h-screen antialiased leading-none">
     <div id="app">
         <nav class="bg-white shadow-sm">
             <div class="flex justify-between items-center container mx-auto py-4">
@@ -26,7 +26,10 @@
                 <div class="flex uppercase text-sm">
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">About</a>
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">Software</a>
-                    <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">Bootcamp</a>
+                    <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500
+                             {{ Route::is('bootcamp') ? 'border-orange-500' : ''}}"
+                       href="{{ route('bootcamp') }}">Bootcamp
+                    </a>
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">Open source</a>
                     <a class="px-8 py-4 bg-black text-white hover:opacity-75" href="#">Lets chat</a>
                         @guest
@@ -58,7 +61,7 @@
                 </div>
             </div>
         </nav>
-        <div class="h-screen">
+        <div class="">
             @yield('content')
         </div>
 
