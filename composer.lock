@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8baab081153b85a2c4eb1f170c185b25",
+    "content-hash": "a0b51638551e7467380f499a75ecee47",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,62 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "codinglabsau/laravel-roles",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codinglabsau/laravel-roles.git",
+                "reference": "de6b9afcb9c402dc7b9a73b8f1e124396dda989c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codinglabsau/laravel-roles/zipball/de6b9afcb9c402dc7b9a73b8f1e124396dda989c",
+                "reference": "de6b9afcb9c402dc7b9a73b8f1e124396dda989c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.8|^6.0|^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "~3|~4",
+                "phpunit/phpunit": "^8.0",
+                "sempro/phpunit-pretty-print": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Codinglabs\\Roles\\RolesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codinglabs\\Roles\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Thomas",
+                    "email": "steve@codinglabs.com.au",
+                    "homepage": "https://codinglabs.com.au"
+                }
+            ],
+            "description": "Simple Laravel roles",
+            "homepage": "https://github.com/codinglabsau/laravel-roles",
+            "keywords": [
+                "laravel",
+                "roles"
+            ],
+            "time": "2020-03-19T13:06:06+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -683,6 +739,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -729,6 +786,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
