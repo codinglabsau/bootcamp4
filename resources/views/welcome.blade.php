@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-red-100 h-screen antialiased leading-none">
+<body class="bg-gray-100 h-screen antialiased leading-none">
 <div class="flex flex-col">
     @if(Route::has('login'))
         <div class="absolute top-0 right-0 mt-4 mr-4">
@@ -32,7 +32,7 @@
         <div class="flex flex-col justify-around h-full">
             <div>
                 <h1 class="text-gray-600 text-center font-light tracking-wider text-5xl mb-6">
-                    {{ config('app.name', 'Laravel') }}
+                    Bootcamp4
                 </h1>
                 <ul class="list-reset">
                     <li class="inline pr-8">
