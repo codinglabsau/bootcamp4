@@ -9,19 +9,18 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AdminRoleTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-
     use DatabaseMigrations;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('bootstrap');
+    }
 
     public function testAdminRoles()
     {
         // arrange
-        Role::create(['name' => 'administrator']);
-
         $user = factory(User::class)->create([
             'name' => 'Kripson',
         ]);

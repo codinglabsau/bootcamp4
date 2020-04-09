@@ -16,8 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Seed Roles
-        Role::insert([['name' => 'administrator'], ['name' => 'instructor'], ['name' => 'student']]);
+        \Illuminate\Support\Facades\Artisan::call('bootstrap');
 
         // Seed Users
 
@@ -30,15 +29,15 @@ class DatabaseSeeder extends Seeder
          * an Assessment and 2 AssessmentItems for each Section
          */
 
-                for ($i = 1; $i <= 12; $i++) {
-                    // Seed Lessons
-                    factory(Lesson::class, 5)->create(['section_id' => $i]);
-
-                    // Seed Assessments
-                    factory(Assessment::class)->create(['section_id' => $i]);
-
-                    // Seed AssessmentItems
-                    factory(AssessmentItem::class, 2)->create(['assessment_id' => $i]);
-                }
+//                for ($i = 1; $i <= 12; $i++) {
+//                    // Seed Lessons
+//                    factory(Lesson::class, 5)->create(['section_id' => $i]);
+//
+//                    // Seed Assessments
+//                    factory(Assessment::class)->create(['section_id' => $i]);
+//
+//                    // Seed AssessmentItems
+//                    factory(AssessmentItem::class, 2)->create(['assessment_id' => $i]);
+//                }
     }
 }
