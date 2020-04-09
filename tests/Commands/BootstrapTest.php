@@ -18,6 +18,10 @@ class BootstrapTest extends TestCase
         $this->assertDatabaseHas('roles', [
             'name' => 'administrator'
         ]);
+
+        $this->assertDatabaseHas('roles', [
+            'name' => 'student'
+        ]);
     }
 
     /** @test */

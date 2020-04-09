@@ -33,6 +33,9 @@ class Bootstrap extends Command
             [
                 'name' => 'administrator',
             ],
+            [
+                'name' => 'student',
+            ],
         ];
 
         foreach ($roles as $role) {

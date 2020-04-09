@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
-use Codinglabs\Roles\Role;
 use App\Lesson;
 use App\Assessment;
 use App\AssessmentItem;
+use Codinglabs\Roles\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,6 +19,15 @@ class DatabaseSeeder extends Seeder
         \Illuminate\Support\Facades\Artisan::call('bootstrap');
 
         // Seed Users
+        $admin = factory(\App\User::class)->create([
+            'email' => 'administrator@bootcamp4.test',
+        ]);
+        $admin->roles()->attach(Role::whereName('administrator')->first());
+
+        $student = factory(\App\User::class)->create([
+            'email' => 'student@bootcamp4.test',
+        ]);
+        $student->roles()->attach(Role::whereName('student')->first());
 
         // Seed Courses
 
