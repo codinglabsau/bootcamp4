@@ -8,10 +8,8 @@ use App\Course;
 class CourseController extends Controller
 {
     public function index() {
-        $courses = Course::all()->map(function ($course) {
-            $course->description = explode('|', $course->description);
-            return $course;
-        });
-        return view('bootcamp.index', ['courses' => $courses]);
+        $courses = Course::all();
+
+        return view('bootcamp.index', compact('courses'));
     }
 }
