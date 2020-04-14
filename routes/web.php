@@ -20,3 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('courses', 'CourseController')->names([
+   'index' => 'courses',
+]);
+
