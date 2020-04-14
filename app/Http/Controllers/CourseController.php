@@ -10,7 +10,7 @@ class CourseController extends Controller
     {
         $courses = Course::all();
 
-        return view('bootcamp.index', compact('courses'));
+        return view('courses.index', compact('courses'));
     }
 
     public function show(Course $course)

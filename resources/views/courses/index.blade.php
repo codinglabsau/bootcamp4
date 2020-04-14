@@ -53,7 +53,8 @@
                             </div>
                             <p class="text-xs py-2">{{ $loop->index % 2 == 1 ? ':: next intake March 2020 ::' : ':: lifetime access ::' }}</p>
                         </div>
-                        <a class="w-1/2 self-center px-8 py-8 bg-teal-300 text-white text-center text-xl font-semibold hover:bg-teal-200    " href="#">
+                        <a class="w-1/2 self-center px-8 py-8 bg-teal-300 text-white text-center text-xl font-semibold hover:bg-teal-200"
+                           href="{{ $course->path() }}">
                             View Course
                         </a>
                     </div>

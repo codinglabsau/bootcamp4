@@ -9,4 +9,9 @@ class Course extends Model
     protected $casts = [
         'description' => 'array'
     ];
+
+    public function path()
+    {
+        return "courses/{$this->id}";
+    }
 }

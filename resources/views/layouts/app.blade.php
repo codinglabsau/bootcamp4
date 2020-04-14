@@ -27,8 +27,8 @@
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">About</a>
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">Software</a>
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500
-                             {{ Route::is('bootcamp') ? 'border-orange-500' : ''}}"
-                       href="{{ route('bootcamp') }}">Bootcamp
+                             {{ Route::is('courses') ? 'border-orange-500' : ''}}"
+                       href="{{ route('courses') }}">Bootcamp
                     </a>
                     <a class="mr-2 px-4 py-4 border-b-4 border-white hover:border-orange-500" href="#">Open source</a>
                     <a class="px-8 py-4 bg-black text-white hover:opacity-75" href="#">Lets chat</a>
