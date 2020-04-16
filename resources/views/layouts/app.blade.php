@@ -43,10 +43,15 @@
 {{--                                <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
 {{--                            @endif--}}
                         @else
-                            <span class="text-gray-300 text-sm pr-4">{{ Auth::user()->name }}</span>
+                            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="/home">Dashboard</a>
+
+                            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="/quiz">Quiz</a>
+
+                            
+                            <img class="inline-block rounded-full h-15 w-15 mr-4" src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/11/04/37716de6-fee6-11e9-93ee-a5388fc1b87d_image_hires_174946.jpg?itok=81dBdlex&v=1572860994">
 
                             <a href="{{ route('logout') }}"
-                               class="no-underline hover:underline text-gray-300 text-sm p-3"
+                               class="mx-auto lg:mx-0 hover:underline bg-white text-black rounded-full ml-4 lg:mt-0 py-4 px-8 shadow opacity-100"
                                onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                 <svg fill="currentColor" viewBox="0 0 20 20">
@@ -120,6 +125,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
+    <!-- <script src="{{ mix('js/app.js') }}"></script> -->
 </body>
 </html>
