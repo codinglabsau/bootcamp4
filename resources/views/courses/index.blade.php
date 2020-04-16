@@ -5,7 +5,7 @@
         <div class="flex flex-col">
             <div class="flex flex-col items-center">
                 <h1 class="text-3xl font-semibold">Become a Developer</h1>
-                <img class="w-1/3 py-4" src="https://d2wks4gidu9630.cloudfront.net/b3f9334c-fcd6-46b8-84fc-71888d900aab/svg/underline.svg"
+                <img class="w-1/3 py-4" src="{{ asset('images/underline.svg') }}"
                      alt="Orange underline" />
             </div>
             <div class="flex py-8">
@@ -24,7 +24,7 @@
                         development and offer advice.
                     </p>
                 </div>
-                <img src="https://drive.google.com/uc?export=view&id=1iJwAMONg6KQ7qz2Olf94Jdp6qIN7uYY8"
+                <img src="{{ asset('images/student-image.png') }}"
                      alt="Image of a student" />
             </div>
             <div class="flex py-12 mt-12">

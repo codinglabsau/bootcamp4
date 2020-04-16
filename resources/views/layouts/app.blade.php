@@ -20,7 +20,7 @@
         <nav class="bg-white shadow-sm">
             <div class="flex justify-between items-center container mx-auto py-4">
                 <a href="{{ url('/') }}">
-                    <img class="w-full" src="https://d2wks4gidu9630.cloudfront.net/b3f9334c-fcd6-46b8-84fc-71888d900aab/svg/codinglabs-logo.svg"
+                    <img class="w-full" src="{{ asset('images/codinglabs-logo.svg') }}"
                          alt="Coding Labs logo" />
                 </a>
                 <div class="flex uppercase text-sm">
