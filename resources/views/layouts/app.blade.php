@@ -70,7 +70,7 @@
                 <div class="flex container justify-between mx-auto py-12">
                     <div class="flex flex-col">
                         <a class="w-32" href="#">
-                            <img class="w-full" src="https://d2wks4gidu9630.cloudfront.net/b3f9334c-fcd6-46b8-84fc-71888d900aab/svg/logo-footer.svg"
+                            <img class="w-full" src="{{ asset('images/logo-footer.svg') }}"
                                  alt="Coding Labs footer logo" />
                         </a>
                         <p class="py-6 uppercase">Gold coast australia</p>
@@ -106,7 +106,7 @@
                         <a class="py-1" href="#">Bootcamp</a>
                         <a class="py-1" href="#">Careers</a>
                     </div>
-                    <img src="https://d2wks4gidu9630.cloudfront.net/b3f9334c-fcd6-46b8-84fc-71888d900aab/svg/footer-arrow.svg"
+                    <img src="{{ asset('images/footer-arrow.svg') }}"
                          alt="Swirly arrow" />
                     <div class="flex flex-col w-1/5 text-sm">
                         <p class="leading-loose">We build fast, scalable, affordable and secure web and mobile applications for innovative
