@@ -3,9 +3,13 @@
 use Illuminate\Database\Seeder;
 
 use App\Course;
+use App\Section;
 use App\Lesson;
 use App\Assessment;
 use App\AssessmentItem;
+use App\Enrolment;
+use App\EnrolmentLesson;
+use App\EnrolmentAssessmentItem;
 use Codinglabs\Roles\Role;
 
 class DatabaseSeeder extends Seeder
@@ -33,21 +37,38 @@ class DatabaseSeeder extends Seeder
         // Seed Courses
         factory(Course::class)->create(['name' => 'Become a Developer in 12 Days']);
         factory(Course::class)->create(['name' => 'Laravel Developer Bootcamp']);
-        // Seed Sections
 
-        /*
-         * Jay is doing Users, Courses and Sections and has said that he seeds 12 sections so the loop seeds 5 Lessons,
-         * an Assessment and 2 AssessmentItems for each Section
-         */
-//        for ($i = 1; $i <= 12; $i++) {
-//            // Seed Lessons
-//            factory(Lesson::class, 5)->create(['section_id' => $i]);
-//
-//            // Seed Assessments
-//            factory(Assessment::class)->create(['section_id' => $i]);
-//
-//            // Seed AssessmentItems
-//            factory(AssessmentItem::class, 2)->create(['assessment_id' => $i]);
-//        }
+        // Seed Sections
+        Course::all()->map(function ($course) {
+            factory(Section::class, 12)->create(['course_id' => $course->id]);
+        });
+
+        // Seed Lessons and Assessments
+        Section::all()->map(function ($section) {
+            factory(Lesson::class, 5)->create(['section_id' => $section->id]);
+            factory(Assessment::class)->create(['section_id' => $section->id]);
+        });
+
+        // Seed AssessmentItems
+        Assessment::all()->map(function ($assessment) {
+            factory(AssessmentItem::class, 2)->create(['assessment_id' => $assessment->id]);
+        });
+
+        // Enrol a student into a course
+        factory(Enrolment::class)->create(['user_id' => $student->id, 'course_id' => Course::all()->first()->id]);
+
+        // Simulate 50% completion for student.
+        $enrolment = $student->enrolments->last();
+        $enrolment->course->sections->take($enrolment->course->sections->count() / 2)->map(function ($section) use ($enrolment){
+            $section->lessons->map(function ($lesson) use ($enrolment){
+                // Seed completed Lessons
+               factory(EnrolmentLesson::class)->create(['enrolment_id' => $enrolment->id, 'lesson_id' => $lesson->id]);
+            });
+            $section->assessment->assessmentItems->map(function ($assessmentItem) use ($enrolment) {
+                // Seed completed AssessmentItems
+                factory(EnrolmentAssessmentItem::class)->create(['enrolment_id' => $enrolment->id,
+                    'assessment_item_id' => $assessmentItem->id]);
+            });
+        });
     }
 }

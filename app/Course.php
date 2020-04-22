@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Section;
 
 class Course extends Model
 {
@@ -13,5 +14,10 @@ class Course extends Model
     public function path()
     {
         return "courses/{$this->id}";
+    }
+
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
     }
 }
