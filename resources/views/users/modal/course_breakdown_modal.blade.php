@@ -43,7 +43,11 @@
                                 @foreach ($section->lessons as $lesson)
                                     <div class="w-full flex items-center justify-between pr-9 py-2">
                                         <p class="flex-1 pl-24">{{ $lesson->name }}</p>
-                                        <p class="flex-1">Mon 20th Apr, 2020</p>
+                                        @if ($enrolment->lessons->where('lesson_id', $lesson->id)->first())
+                                            <p class="flex-1 pl-24">{{ $enrolment->lessons->where('lesson_id', $lesson->id)->first()->created_at }}</p>
+                                        @else
+                                            <p class="flex-1 pl-24">n/a</p>
+                                        @endif
                                         <div></div>
                                         <div class="{{ $enrolment->lessons->where('lesson_id', $lesson->id)->first() != null ? 'text-black' : 'text-white' }}">
                                             <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +67,10 @@
                                 @foreach ($section->assessment->assessmentItems as $assessmentItem)
                                     <div class="w-full flex items-center justify-evenly pl-24 pr-9 py-2">
                                         <p class="flex-1">{{ $assessmentItem->name}}</p>
-                                        <p class="flex-1">Mon 20th Apr, 2020</p>
                                         @if ($enrolment->assessmentItems->where('assessment_item_id', $assessmentItem->id)->first())
+                                            <p class="flex-1">
+                                                {{ $enrolment->assessmentItems->where('assessment_item_id', $assessmentItem->id)->first()->created_at }}
+                                            </p>
                                             <p class="flex-1">
                                                 {{ $enrolment->assessmentItems->where('assessment_item_id', $assessmentItem->id)->first()->mark }}/10
                                             </p>

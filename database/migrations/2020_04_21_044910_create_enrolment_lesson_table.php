@@ -13,7 +13,7 @@ class CreateEnrolmentLessonTable extends Migration
      */
     public function up()
     {
-        Schema::create('enrolment_lessons', function (Blueprint $table) {
+        Schema::create('enrolment_lesson', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('enrolment_id');
@@ -31,6 +31,6 @@ class CreateEnrolmentLessonTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enrolment_lessons');
+        Schema::dropIfExists('enrolment_lesson');
     }
 }

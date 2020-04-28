@@ -13,7 +13,7 @@ class CreateEnrolmentAssessmentItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('enrolment_assessment_items', function (Blueprint $table) {
+        Schema::create('enrolment_assessment_item', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('enrolment_id');
@@ -32,6 +32,6 @@ class CreateEnrolmentAssessmentItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enrolment_assessment_items');
+        Schema::dropIfExists('enrolment_assessment_item');
     }
 }

@@ -21,11 +21,6 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 
-Route::get('modal-test', function() {
-    //dd(App\User::find(2)->enrolments->first()->assessmentItems->where('assessment_item_id', 1)->first()->mark);
-    return view('modal_test');
-})->middleware('auth');
-
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
