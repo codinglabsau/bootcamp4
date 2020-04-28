@@ -31,4 +31,14 @@ class Enrolment extends Model
     {
         return $this->hasMany(EnrolmentAssessmentItem::class);
     }
+
+    public function sectionComplete(Section $section)
+    {
+        $lessons = $this->lessons->filter(function ($lesson) use ($section) {
+            if ($lesson->lesson->section_id == $section->id) {
+                return $lesson;
+            }
+        });
+        return $lessons->count() == $section->lessons->count();
+    }
 }
