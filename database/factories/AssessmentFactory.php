@@ -2,9 +2,8 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
 use Faker\Generator as Faker;
-use App\Asssessment;
+use App\Assessment;
 use App\Section;
 
 $factory->define(Assessment::class, function (Faker $faker) {

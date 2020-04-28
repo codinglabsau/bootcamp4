@@ -23,7 +23,7 @@ Route::get('/quiz', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 Route::resource('courses', 'CourseController')->names([
    'index' => 'courses',

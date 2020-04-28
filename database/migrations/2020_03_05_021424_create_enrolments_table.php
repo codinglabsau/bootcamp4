@@ -17,8 +17,6 @@ class CreateEnrolmentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('user_id');
-            $table->double('current_mark');
-            $table->integer('current_lesson');
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses');
@@ -33,6 +31,6 @@ class CreateEnrolmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_student');
+        Schema::dropIfExists('enrolments');
     }
 }
