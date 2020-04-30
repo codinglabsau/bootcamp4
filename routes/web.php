@@ -29,3 +29,9 @@ Route::resource('courses', 'CourseController')->names([
    'index' => 'courses',
 ]);
 
+Route::get('/users', 'UserController@index');
+
+Route::get('/edit/user/', 'UserController@edit')->name('user.edit');
+Route::post('/edit/user/', 'UserController@update')->name('user.update');
+
+
