@@ -45,4 +45,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Enrolment::class);
     }
+
+    public function hasAccess(Course $course)
+    {
+        return $this->enrolments->firstWhere('course_id', $course->id) != null;
+    }
 }
