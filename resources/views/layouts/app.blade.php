@@ -16,8 +16,8 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
 </head>
-<body class="h-screen antialiased leading-none bg-gray-100">
-    <div id="app">
+<body class="h-screen antialiased leading-none bg-white">
+    <div id="app" class="h-full flex flex-col">
 
         <nav class="bg-white shadow-sm">
             <div class="flex justify-between items-center container mx-auto py-4">
@@ -47,11 +47,11 @@
             </div>
         </nav>
 
-        <div class="">
+        <div class="h-full">
             @yield('content')
         </div>
 
-        <footer class="bg-black text-white px-12">
+        <footer class="relative bottom-0 w-full bg-black text-white px-12">
             <div class="flex flex-col">
                 <div class="flex container justify-between mx-auto py-12">
                     <div class="flex flex-col">
