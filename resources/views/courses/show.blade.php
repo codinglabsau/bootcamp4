@@ -6,6 +6,10 @@
 
         <div class="flex flex-col">
 
+            <div class="py-8">
+                @include('users.navigation.user_navigation')
+            </div>
+
             <div class="flex py-8 text-sm">
                 <a href="{{ route('courses') }}">
                     <span class="text-blue-400">
