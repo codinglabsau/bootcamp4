@@ -17,16 +17,21 @@
                 </p>
             </div>
 
-            <div style="height:150px" class="flex mb-8 bg-white border rounded shadow">
-                <img class="px-8 h-36" src="{{ asset('images/imgs/laravel-logo.png') }}" alt="Laravel Logo"/>
-                <svg class="h-full text-laravel" preserveAspectRatio="none" viewBox="0 0 100 100">
+            <div style="height:150px" class="flex mb-8 border rounded bg-white shadow">
+                <div class="absolute bg-white flex-1 pb-1">
+                    <img class="px-7 h-36" src="{{ asset('images/imgs/laravel-logo.png') }}" alt="Laravel Logo"/>
+                </div>
+                <svg class="ml-64 h-full text-laravel" preserveAspectRatio="none" viewBox="0 0 100 100">
                     <polygon points="0,0 100,0 100,100 0,0" fill="currentColor"/>
                 </svg>
-                <div class="flex-1 h-full flex items-center text-white text-2xl bg-laravel rounded-r">
-                    <h1 class="flex-1 px-12">
-                        {{ $course->name }}
-                    </h1>
+                <div class="flex-1 flex items-center bg-laravel">
+                    <h1 class="relative left-1/5 text-white text-2xl">{{ $course->name }}</h1>
                 </div>
+{{--                <div class="flex-1 h-full flex items-center text-white text-2xl bg-laravel rounded-r">--}}
+{{--                    <h1 class="flex-1 px-12">--}}
+{{--                        {{ $course->name }}--}}
+{{--                    </h1>--}}
+{{--                </div>--}}
             </div>
 
             @guest
