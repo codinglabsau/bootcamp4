@@ -29,3 +29,12 @@ Route::resource('courses', 'CourseController')->names([
    'index' => 'courses',
 ]);
 
+
+// User
+Route::get('/profile', 'UserController@index');
+
+Route::get('/users/{user}/edit', 'UserController@edit')->name('user.edit');
+Route::put('/users/{user}', 'UserController@update')->name('user.update');
+
+Route::post('/upload', 'ImageController@upload')->name('avatar.upload');
+///
