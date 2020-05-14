@@ -16,7 +16,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
 </head>
-<body class="h-screen antialiased leading-none">
+<body class="h-screen antialiased leading-none bg-gray-100">
     <div id="app">
         <nav class="bg-white shadow-sm">
             <div class="flex justify-between items-center container mx-auto py-4">

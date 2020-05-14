@@ -18,6 +18,9 @@ module.exports = {
                 '"Noto Color Emoji"',
             ],
         },
+        colors: {
+            'laravel': '#FA4F3A',
+        },
     },
   },
   variants: {},
