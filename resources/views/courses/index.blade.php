@@ -38,7 +38,7 @@
                             <p class="py-2 text-sm">{{ $loop->index % 2 == 1 ? '12 Week Classroom-Based' : 'Self-Paced Online' }}</p>
                         </div>
                         @foreach ($course->description as $description)
-                            <div class="flex px-8 py-3 items-center">
+                            <div class="flex-1 flex px-8 py-3 items-center">
                                 <svg class="w-6 h-6 text-teal-300 absolute" fill="none" viewBox="0 0 20 20">
                                     <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="4"/>
                                     <circle cx="10" cy="10" r="3" fill="currentColor"/>
@@ -54,8 +54,8 @@
                             <p class="text-xs py-2">{{ $loop->index % 2 == 1 ? ':: next intake March 2020 ::' : ':: lifetime access ::' }}</p>
                         </div>
                         <a class="w-1/2 self-center px-8 py-8 bg-teal-300 text-white text-center text-xl font-semibold hover:bg-teal-200"
-                           href="{{ $course->path() }}">
-                            View Course
+                           href="{{ route('register') }}">
+                            Sign Up Today
                         </a>
                     </div>
                 @endforeach
